@@ -4,11 +4,15 @@ WHERE salary < (
 );
 
 -- Alternative solution using DENSE_RANK (Window function)
-SELECT salary FROM (
+SELECT salary AS SecondHighestSalary FROM (
     SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) as rank FROM employee
-) AS SecondHighestSalary WHERE rank = 2;
+) t WHERE rank = 2;
+
+SELECT MAX(salary) AS SecondHighestSalary FROM (
+    SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) as rank FROM employee
+) t WHERE rank = 2;
 
 
-SELECT salary FROM employee 
+SELECT salary AS SecondHighestSalary FROM employee 
 ORDER BY salary DESC
 LIMIT 1 OFFSET 1;
