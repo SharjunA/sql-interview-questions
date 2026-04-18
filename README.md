@@ -1,6 +1,6 @@
 # SQL Interview Questions 🚀
 
-A curated collection of SQL interview questions and solutions designed to help you crack technical interviews in Data Engineering, Data Analysis, and Software roles.
+A curated collection of SQL interview questions and solutions designed to help you crack technical interviews in Data Engineering, Data Analysis and Software roles.
 
 ---
 
@@ -25,44 +25,12 @@ This repository contains a structured set of SQL problems ranging from basic to 
 
 ---
 
-## 📂 Structure
-
-| Level     | Description                     |
-| --------- | ------------------------------- |
-| 🟢 Easy   | Basic queries and syntax        |
-| 🟡 Medium | Joins, aggregations, subqueries |
-| 🔴 Hard   | Window functions, complex logic |
-
----
-
-## 💡 Example Question
-
-**Find the second highest salary**
-
-```sql
-SELECT DISTINCT salary
-FROM employee
-ORDER BY salary DESC
-LIMIT 1 OFFSET 1;
-```
-
----
-
 ## 🎯 Who Is This For?
 
 * Data Analysts
 * Data Engineers
 * Backend Developers
 * Anyone preparing for SQL interviews
-
----
-
-## 🚀 How to Use
-
-1. Start with Easy questions
-2. Move to Medium
-3. Practice Hard questions repeatedly
-4. Try solving without looking at solutions
 
 ---
 
